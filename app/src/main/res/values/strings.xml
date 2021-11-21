@@ -8,10 +8,11 @@
     <string name="surname_hint">Last Name</string>
     <string name="birthday_label">When was the child born</string>
     <string name="notes_label">Notes</string>
-    <string name="add_another_child">Add another child</string>
     <string name="gender_label">What is the child\'s gender?</string>
     <string name="female">Female</string>
     <string name="male">Male</string>
     <string name="not_listed">Not listed</string>
 
+    <string name="add_another_child">Add another child</string>
+    <string name="save">Save</string>
 </resources>

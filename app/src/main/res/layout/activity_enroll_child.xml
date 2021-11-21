@@ -112,12 +112,12 @@
         app:layout_constraintTop_toBottomOf="@id/notes_input"
     />
     <Button
-        android:id="@+id/add_another_child_button"
+        android:id="@+id/save_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/notes_label"
-        android:text="@string/add_another_child"
+        android:text="@string/save"
     />
 
 
