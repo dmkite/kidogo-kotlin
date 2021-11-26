@@ -1,23 +1,24 @@
 package com.example.kidogo
 
+import java.time.LocalDate
 import java.util.*
 import java.util.UUID.randomUUID
 
 open class Transaction(
     val amount: Int,
-    val date: Date
+    val date: LocalDate
 ) {
     val id = randomUUID()
 }
 
 class Payment(
     amount: Int,
-    date: Date
+    date: LocalDate
 ): Transaction(amount, date)
 
 class Fee(
     amount: Int,
-    date: Date
+    date: LocalDate
 ): Transaction(amount, date)
 
 
@@ -28,17 +29,17 @@ class Family(
 ) {
     val id = randomUUID()
     var balance = 0
-    private var paymentHistory= mutableListOf<Transaction>()
+    var paymentHistory= mutableListOf<Transaction>()
     val rate = object {
         var amount: Int = 0
         var frequencey = "daily"
     }
 
-    fun addPayment(amount: Int, date: Date) {
+    fun addPayment(amount: Int, date: LocalDate) {
         addTransaction(Payment(amount, date))
     }
 
-    fun addFee(amount: Int, date: Date) {
+    fun addFee(amount: Int, date: LocalDate) {
         addTransaction(Fee(amount, date))
     }
 
@@ -52,5 +53,10 @@ class Family(
                 balance = balance - transaction.amount
             }
         }
+    }
+
+    fun removeTransaction(id: UUID) {
+        val trans = paymentHistory.firstOrNull{it -> it.id == id}
+        trans ?: paymentHistory.remove(trans)
     }
 }
