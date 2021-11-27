@@ -8,7 +8,7 @@ open class Transaction(
     val amount: Int,
     val date: LocalDate
 ) {
-    val id = randomUUID()
+    val id: UUID = randomUUID()
 }
 
 class Payment(
@@ -27,6 +27,7 @@ class Family(
     val guardian: Guardian,
     val emergencyContact: EmergencyContact
 ) {
+    val familyName = "TEST" // guardian.surname
     val id = randomUUID()
     var balance = 0
     var paymentHistory= mutableListOf<Transaction>()

@@ -3,7 +3,6 @@ package com.example.kidogo
 import junit.framework.TestCase
 import org.junit.Test
 import com.nhaarman.mockitokotlin2.mock
-import com.nhaarman.mockitokotlin2.verify
 import java.time.LocalDate
 import java.util.*
 
@@ -14,14 +13,14 @@ class FamilyTest : TestCase() {
     private val family = Family(
         children, guardian, emergencyContact
     )
+
     @Test
     fun `assigns a uuid on initialization`() {
-        assert(family.id is UUID)
+        assertNotNull(family.id)
     }
 
     @Test
     fun `generates empty payment history on initialization`() {
-        assert(family.paymentHistory is MutableList)
         assert(family.paymentHistory.size == 0)
     }
 

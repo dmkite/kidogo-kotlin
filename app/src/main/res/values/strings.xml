@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">kidogo</string>
+    <!-- Utility strings -->
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
 
     <!-- Child enrollment strings -->
     <string name="first_name_label">What is the child\'s name?</string>
@@ -14,5 +18,10 @@
     <string name="not_listed">Not listed</string>
 
     <string name="add_another_child">Add another child</string>
-    <string name="save">Save</string>
+
+<!-- Family strings -->
+    <string name="family_surname_placeholder">The [placeholder] Family</string>
+    <string name="parent">Parent</string>
+    <string name="children">Children</string>
+    <string name="emergency_contact">Emergency Contact</string>
 </resources>

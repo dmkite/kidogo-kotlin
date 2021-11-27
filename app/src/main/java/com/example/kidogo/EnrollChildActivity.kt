@@ -33,8 +33,4 @@ class EnrollChildActivity: AppCompatActivity() {
         val child = Child(firstName, surname, gender, birthday, notes)
         
     }
-
-    private fun createFamilyUnit() {
-//        val family = Family(mutableListOf(Child))
-    }
 }
